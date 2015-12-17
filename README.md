@@ -1,4 +1,9 @@
+
+
 ## Introduction
+This is the exercise for the Peer Assessment 1 in Coursera "Reproducible Research" Course. Below there is a copy of the original instructions:
+
+
 
 It is now possible to collect a large amount of data about personal
 movement using activity monitoring devices such as a
