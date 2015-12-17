@@ -28,22 +28,6 @@ ipak(packages)
 ```
 
 ```
-## Loading required package: dplyr
-## 
-## Attaching package: 'dplyr'
-## 
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-## 
-## Loading required package: lattice
-```
-
-```
 ##   dplyr lattice   knitr 
 ##    TRUE    TRUE    TRUE
 ```
@@ -115,7 +99,16 @@ names(which(y==max(y)))
 ## [1] "835"
 ```
 
-The total number of missing values in the dataset is 2304
+The total number of missing values in the dataset is
+
+
+```r
+sum(!complete.cases(raw))
+```
+
+```
+## [1] 2304
+```
 
 We fill the missing values with the mean for that interval of the day
 
@@ -137,7 +130,7 @@ Histogram of the total number of steps taken each day
 hist(total.steps.per.day,ylab="Number of days",xlab="Steps per day")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
 
 Calculate and report the mean and median of the total number of steps taken each day
 
@@ -178,6 +171,6 @@ df3<-filled2 %>%
 xyplot(group.mean~interval|day.type,data=df3,type="l",layout=c(1,2))
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png) 
+![plot of chunk unnamed-chunk-16](figure/unnamed-chunk-16-1.png) 
 
 
